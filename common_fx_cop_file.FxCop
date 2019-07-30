@@ -21,7 +21,7 @@
     <IgnoreGeneratedCode>False</IgnoreGeneratedCode>
   </ProjectOptions>
   <Targets>
-    <Target Name="NewSolutionPath" Analyze="True" AnalyzeAllChildren="True" />
+    <Target Name="C:\Users\320050765\StaticAnalysisTool\CaseStudy\HelloWorld\bin\Debug\HelloWorld.exe" Analyze="True" AnalyzeAllChildren="True" />
   </Targets>
   <Rules>
     <RuleFiles>
