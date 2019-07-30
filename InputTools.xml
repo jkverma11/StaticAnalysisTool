@@ -1,0 +1,13 @@
+<StaticTools>
+	<Tools>
+		<ToolName>FxCop</ToolName>
+		<Path>"C:\Program Files (x86)\Microsoft Fxcop 10.0\FxCopCmd.exe"</Path>
+		<Arguments>"/p:C:\FxCop\FxCopProjectFile.FxCop /out:C:\Users\320050491\Downloads\FxCopOutput\FxCopReport.xml"</Arguments>
+	</Tools>
+	<Tools>
+		<ToolName>NDepend</ToolName>
+		<Path>"C:\Users\320050491\Downloads\NDepend_2019.2.6.9270\NDepend.Console.exe"</Path>
+		<Arguments>"C:\sleepThread\sleepThread.ndproj /LogTrendMetrics /OutDir C:\Users\320050491\Downloads\NDependOutput"</Arguments>
+	</Tools>
+</StaticTools>
+
