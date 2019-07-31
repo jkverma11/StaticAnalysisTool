@@ -8,7 +8,7 @@ namespace StaticAnalyzerTool
 {
     interface IStaticAnalyzer
     {
-        void ProcessInput(string path);
+        void ProcessInput(string projFilePath);
         void ProcessOutput();
     }
 }
