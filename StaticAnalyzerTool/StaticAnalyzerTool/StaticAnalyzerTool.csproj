@@ -49,7 +49,9 @@
   <ItemGroup>
     <Compile Include="CoverityAnalyzer.cs" />
     <Compile Include="FxCopAnalyzer.cs" />
+    <Compile Include="FxCopReport.cs" />
     <Compile Include="NDependAnalyzer.cs" />
+    <Compile Include="NDependXmlReport.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="StaticAnalyzerTool.cs" />

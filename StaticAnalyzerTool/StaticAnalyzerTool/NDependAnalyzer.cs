@@ -26,12 +26,19 @@ namespace StaticAnalyzerTool
             string arguments = _nDependXml + @" /LogTrendMetrics /OutDir " + _ndependOut;
             try
             {
-                Process.Start(NDependExe, arguments);
+                Process proc = new Process();
+                proc.StartInfo.WindowStyle = ProcessWindowStyle.Hidden;
+                proc.StartInfo.Arguments = arguments;
+                proc.StartInfo.FileName = NDependExe;
+                proc.Start();
             }
             catch (Exception e)
             {
                 Console.WriteLine(e.Message);
             }
+
+            string NdependOutputXml = _ndependOut + @"\TrendMetrics\NDependTrendData2019.xml";
+            NDependXmlReport.GenerateNDependReport(NdependOutputXml);
         }
     }
 }

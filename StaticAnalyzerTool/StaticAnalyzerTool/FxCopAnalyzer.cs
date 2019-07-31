@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Diagnostics;
 using System.IO;
+using System.Threading;
 
 
 namespace StaticAnalyzerTool
@@ -23,12 +24,18 @@ namespace StaticAnalyzerTool
             string arguments = @"/p:" + _fxCopXml + @" /out:" + _fxCopOutput;
             try
             {
-                Process.Start(FxCopExe, arguments);
+                Process proc = new Process();
+                //proc.StartInfo.WindowStyle = ProcessWindowStyle.Hidden;
+                proc.StartInfo.Arguments = arguments;
+                proc.StartInfo.FileName = FxCopExe;
+                proc.Start();
             }
             catch (Exception e)
             {
                 Console.WriteLine(e.Message);
             }
+            Thread.Sleep(5000);
+            FxCopReport.GenerateFxCopReport(_fxCopOutput);
         }
     }
 }

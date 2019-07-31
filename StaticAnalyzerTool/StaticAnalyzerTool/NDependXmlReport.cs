@@ -8,13 +8,12 @@ using System.IO;
 
 namespace StaticAnalyzerTool
 {
-    class NDependXmlReport
+    public static class NDependXmlReport
     {
-        public static void Main(string[] args)
+        public static void GenerateNDependReport(string NDependXmlOutputPath)
         {
-            string NDependXmloutput = "C:\\Users\\320050491\\Downloads\\NDependOutput\\TrendMetrics\\NDependTrendData2019.xml";
-            XmlTextReader reader = new XmlTextReader(NDependXmloutput);
-            Dictionary<string, string > NDependMetrics = new Dictionary<string, string>();
+           
+            XmlTextReader reader = new XmlTextReader(NDependXmlOutputPath);
             List<string> AttributeName = new List<string>();
             string[] AttribueValue = null;
             
@@ -44,8 +43,8 @@ namespace StaticAnalyzerTool
                                 if (i == 2 && reader.Name == "V")
                                 {
                                     
-                                    string ans = reader.Value;
-                                    AttribueValue = ans.Split('|');
+                                    string answere = reader.Value;
+                                    AttribueValue = answere.Split('|');
                                 }
                                 i++;
                             }
@@ -60,15 +59,12 @@ namespace StaticAnalyzerTool
                 }
             }
 
-            for (int k = 0; k <AttributeName.Count; k++)
+            for (int k = 0; k <AttributeName.Count-3; k++)
             {
-                NDependMetrics.Add(AttributeName[k], AttribueValue[k]);
+                Console.WriteLine("Error Message Parameter = {0} || Error Counts = {1}",AttributeName[k+3],AttribueValue[k].ToString());
             }
 
-            foreach (var item in NDependMetrics)
-            {
-                Console.WriteLine(item);
-            }
+            
         }
 
     }
