@@ -1,8 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 using System.Xml;
 using System.IO;
 
@@ -10,12 +8,12 @@ namespace StaticAnalyzerTool
 {
     public static class NDependXmlReport
     {
-        public static void GenerateNDependReport(string NDependXmlOutputPath)
+        public static void GenerateNDependReport(string nDependXmlOutputPath)
         {
            
-            XmlTextReader reader = new XmlTextReader(NDependXmlOutputPath);
-            List<string> AttributeName = new List<string>();
-            string[] AttribueValue = null;
+            XmlTextReader reader = new XmlTextReader(nDependXmlOutputPath);
+            List<string> attributeName = new List<string>();
+            string[] attributeValue = null;
             
             int flag = 0;
 
@@ -30,7 +28,7 @@ namespace StaticAnalyzerTool
                             {
                                 if (reader.Name == "Name")
                                 {
-                                    AttributeName.Add(reader.Value);
+                                    attributeName.Add(reader.Value);
                                 }
                             }
                             
@@ -44,7 +42,7 @@ namespace StaticAnalyzerTool
                                 {
                                     
                                     string answere = reader.Value;
-                                    AttribueValue = answere.Split('|');
+                                    attributeValue = answere.Split('|');
                                 }
                                 i++;
                             }
@@ -59,13 +57,28 @@ namespace StaticAnalyzerTool
                 }
             }
 
-            for (int k = 0; k <AttributeName.Count-3; k++)
+            StringBuilder strbuild = new StringBuilder();
+            string text = "NDepend_Report";
+            strbuild.AppendLine(text);
+            for (int k = 0; k < attributeValue.Length; k++)
             {
-                Console.WriteLine("Error Message Parameter = {0} || Error Counts = {1}",AttributeName[k+3],AttribueValue[k].ToString());
+                    string val = attributeName[k].Trim(new Char[] {'#'});
+                    text = String.Format("ErrorMessage_Parameter = {0} Error_Count = {1}", val,
+                        attributeValue[k].ToString());
+                    strbuild.AppendLine(text);
             }
-
-            
+            try
+            {
+                using (System.IO.StreamWriter file =
+                    new System.IO.StreamWriter("FinalOutput.txt", true))
+                {
+                    file.Write(strbuild.ToString());
+                }
+            }
+            catch (IOException e)
+            {
+                Console.WriteLine(e);
+            }
         }
-
     }
 }

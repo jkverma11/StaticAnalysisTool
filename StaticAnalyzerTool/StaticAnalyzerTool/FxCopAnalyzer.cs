@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Configuration;
 using System.Diagnostics;
 using System.IO;
 using System.Threading;
@@ -12,7 +13,7 @@ namespace StaticAnalyzerTool
 
         readonly string _fxCopXml = Directory.GetCurrentDirectory() + @"\..\..\..\..\common_fx_cop_file.FxCop";
 
-        readonly string FxCopExe = @"C:\Program Files (x86)\Microsoft Fxcop 10.0\FxCopCmd.exe";
+        readonly string _fxCopExe = ConfigurationManager.AppSettings.Get("FxCopExePath");
 
         public void ProcessInput(string projFilePath)
         {
@@ -25,16 +26,17 @@ namespace StaticAnalyzerTool
             try
             {
                 Process proc = new Process();
-                //proc.StartInfo.WindowStyle = ProcessWindowStyle.Hidden;
+                
+                proc.StartInfo.WindowStyle = ProcessWindowStyle.Hidden;
                 proc.StartInfo.Arguments = arguments;
-                proc.StartInfo.FileName = FxCopExe;
+                proc.StartInfo.FileName = _fxCopExe;
                 proc.Start();
+                proc.WaitForExit();
             }
             catch (Exception e)
             {
                 Console.WriteLine(e.Message);
             }
-            Thread.Sleep(5000);
             FxCopReport.GenerateFxCopReport(_fxCopOutput);
         }
     }
