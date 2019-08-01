@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Xml.Linq;
+using System.IO;
+using System.Text;
 
 namespace StaticAnalyzerTool
 {
@@ -24,9 +26,23 @@ namespace StaticAnalyzerTool
                 errorCertainity.Add(msg.Attribute("Certainty").Value);
             }
 
+            StringBuilder strbuild = new StringBuilder();
+            string text = "FxCop_Report";
+            strbuild.AppendLine(text);
             for (int i = 0; i < errorType.Count; i++)
             {
-               Console.WriteLine("Message = {0} || TypeOfError = {1} || CertainityLevel = {2}",errorMessage[i],errorType[i],errorCertainity[i]);
+                text =string.Format("Error_Message = {0} Error_Type = {1} Certainity_Level = {2}", errorMessage[i],
+                    errorType[i], errorCertainity[i]);
+                strbuild.AppendLine(text); 
+            }
+
+            try
+            {
+                System.IO.File.WriteAllText("FinalOutput.txt", strbuild.ToString());
+            }
+            catch (IOException e)
+            {
+                Console.WriteLine(e);
             }
         }
 
