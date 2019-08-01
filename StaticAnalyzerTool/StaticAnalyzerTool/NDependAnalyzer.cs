@@ -16,7 +16,7 @@ namespace StaticAnalyzerTool
 
         readonly string _ndependOut = Directory.GetCurrentDirectory() + @"\..\..\..\..\XmlOutputs\NDependOutput";
 
-        readonly string _nDependExe = ConfigurationManager.AppSettings.Get("NDependExePath");
+        readonly string _nDependExe = Program.XmlParse("Tool", "NDepend");
 
         public void ProcessInput( string projFilePath)
         {

@@ -13,7 +13,7 @@ namespace StaticAnalyzerTool
 
         readonly string _fxCopXml = Directory.GetCurrentDirectory() + @"\..\..\..\..\common_fx_cop_file.FxCop";
 
-        readonly string _fxCopExe = ConfigurationManager.AppSettings.Get("FxCopExePath");
+        readonly string _fxCopExe = Program.XmlParse("Tool", "FxCop");
 
         public void ProcessInput(string projFilePath)
         {
