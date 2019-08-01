@@ -19,9 +19,7 @@ namespace StaticAnalyzerTool
             IStaticAnalyzer nDepend = new NDependAnalyzer();
             nDepend.ProcessInput(solutionPath);
             nDepend.ProcessOutput();
-            Process proc = new Process() {EnableRaisingEvents = false};
-            proc.StartInfo.FileName = "FinalOutput.txt";
-            proc.Start();
+            
             
             
 

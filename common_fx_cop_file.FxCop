@@ -21,7 +21,7 @@
     <IgnoreGeneratedCode>False</IgnoreGeneratedCode>
   </ProjectOptions>
   <Targets>
-    <Target Name="C:\Users\320050765\StaticAnalysisTool\CaseStudy1-brancth_patch1\CaseStudy1-brancth_patch1\AlertSystemClient\AlertSystemClient\bin\Debug\AlertSystemClient.exe" Analyze="True" AnalyzeAllChildren="True" />
+    <Target Name="C:\Users\320050491\CaseStudy1-brancth_patch1\CaseStudy1-brancth_patch1\AlertSystemClient\AlertSystemClient\bin\Debug\AlertSystemClient.exe" Analyze="True" AnalyzeAllChildren="True" />
   </Targets>
   <Rules>
     <RuleFiles>

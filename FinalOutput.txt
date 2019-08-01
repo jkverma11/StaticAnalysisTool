@@ -1,0 +1,69 @@
+FxCop_Report
+Error_Message = Sign 'AlertSystemClient.exe' with a strong name key. Error_Type = CriticalError Certainity_Level = 95
+Error_Message = Because the behavior of 'DateTime.ToString(string)' could vary based on the current user's locale settings, replace this call in 'Client.GetTimestamp(DateTime)' with a call to 'DateTime.ToString(string, IFormatProvider)'. If the result of 'DateTime.ToString(string, IFormatProvider)' will be displayed to the user, specify 'CultureInfo.CurrentCulture' as the 'IFormatProvider' parameter. Otherwise, if the result will be stored and accessed by software, such as when it is persisted to disk or to a database, specify 'CultureInfo.InvariantCulture'. Error_Type = Error Certainity_Level = 95
+Error_Message = Parameter 'args' of 'Client.Main(string[])' is never used. Remove the parameter or use it in the method body. Error_Type = Warning Certainity_Level = 95
+NDepend_Report
+ErrorMessage_Parameter =  New Issues since Baseline Error_Count = 0
+ErrorMessage_Parameter =  Issues Fixed since Baseline Error_Count = 0
+ErrorMessage_Parameter =  Issues Worsened since Baseline Error_Count = 0
+ErrorMessage_Parameter =  Issues with severity Blocker Error_Count = 0
+ErrorMessage_Parameter =  Issues with severity Critical Error_Count = 0
+ErrorMessage_Parameter =  Issues with severity High Error_Count = 7
+ErrorMessage_Parameter =  Issues with severity Medium Error_Count = 15
+ErrorMessage_Parameter =  Issues with severity Low Error_Count = 12
+ErrorMessage_Parameter =  Blocker/Critical/High Issues Error_Count = 7
+ErrorMessage_Parameter =  Issues Error_Count = 34
+ErrorMessage_Parameter =  Suppressed Issues Error_Count = 0
+ErrorMessage_Parameter =  Rules Error_Count = 152
+ErrorMessage_Parameter =  Rules Violated Error_Count = 15
+ErrorMessage_Parameter =  Critical Rules Violated Error_Count = 1
+ErrorMessage_Parameter =  Quality Gates Error_Count = 11
+ErrorMessage_Parameter =  Quality Gates Warn Error_Count = 1
+ErrorMessage_Parameter =  Quality Gates Fail Error_Count = 2
+ErrorMessage_Parameter = Percentage Debt (Metric) Error_Count = 29.78
+ErrorMessage_Parameter = Debt (Metric) Error_Count = 0.33229
+ErrorMessage_Parameter = New Debt since Baseline (Metric) Error_Count = 0.5
+ErrorMessage_Parameter = Annual Interest (Metric) Error_Count = 0.66458
+ErrorMessage_Parameter = New Annual Interest since Baseline (Metric) Error_Count = 0.55556
+ErrorMessage_Parameter = Breaking Point Error_Count = 47
+ErrorMessage_Parameter = Breaking Point of Blocker / Critical / High Issues Error_Count = 47
+ErrorMessage_Parameter =  Lines of Code Error_Count = 0
+ErrorMessage_Parameter =  Lines of Code (JustMyCode) Error_Count = 2
+ErrorMessage_Parameter =  Lines of Code (NotMyCode) Error_Count = 265
+ErrorMessage_Parameter =  Lines of Code Added since the Baseline Error_Count = 8
+ErrorMessage_Parameter =  Source Files Error_Count = 31
+ErrorMessage_Parameter =  IL Instructions Error_Count = 39.74
+ErrorMessage_Parameter =  IL Instructions (NotMyCode) Error_Count = 1
+ErrorMessage_Parameter =  Lines of Comments Error_Count = 1
+ErrorMessage_Parameter = Percentage of Comments Error_Count = 2
+ErrorMessage_Parameter =  Assemblies Error_Count = 0
+ErrorMessage_Parameter =  Namespaces Error_Count = 2
+ErrorMessage_Parameter =  Types Error_Count = 0
+ErrorMessage_Parameter =  Public Types Error_Count = 0
+ErrorMessage_Parameter =  Classes Error_Count = 0
+ErrorMessage_Parameter =  Abstract Classes Error_Count = 8
+ErrorMessage_Parameter =  Interfaces Error_Count = 0
+ErrorMessage_Parameter =  Structures Error_Count = 8
+ErrorMessage_Parameter =  Methods Error_Count = 3
+ErrorMessage_Parameter =  Abstract Methods Error_Count = 18
+ErrorMessage_Parameter =  Concrete Methods Error_Count = 7.83
+ErrorMessage_Parameter =  Fields Error_Count = 9.2
+ErrorMessage_Parameter = Max # Lines of Code for Methods (JustMyCode) Error_Count = 28
+ErrorMessage_Parameter = Average # Lines of Code for Methods Error_Count = 23.5
+ErrorMessage_Parameter = Max # Lines of Code for Types (JustMyCode) Error_Count = 5
+ErrorMessage_Parameter = Average # Lines of Code for Types Error_Count = 1.83
+ErrorMessage_Parameter = Max Cyclomatic Complexity for Methods Error_Count = 10
+ErrorMessage_Parameter = Average Cyclomatic Complexity for Methods Error_Count = 2.62
+ErrorMessage_Parameter = Max IL Cyclomatic Complexity for Methods Error_Count = 3
+ErrorMessage_Parameter = Average IL Cyclomatic Complexity for Methods Error_Count = 0.625
+ErrorMessage_Parameter = Max IL Nesting Depth for Methods Error_Count = 5
+ErrorMessage_Parameter = Average IL Nesting Depth for Methods Error_Count = 4
+ErrorMessage_Parameter = Max # of Methods for Types Error_Count = 0
+ErrorMessage_Parameter = Average # Methods for Types Error_Count = 4
+ErrorMessage_Parameter =  Lines of Code Uncoverable Error_Count = 14
+ErrorMessage_Parameter =  Third-Party Assemblies Used Error_Count = 54
+ErrorMessage_Parameter =  Third-Party Namespaces Used Error_Count = 34
+ErrorMessage_Parameter =  Third-Party Types Used Error_Count = 0
+ErrorMessage_Parameter =  Third-Party Methods Used Error_Count = 34
+ErrorMessage_Parameter =  Third-Party Fields Used Error_Count = 21
+ErrorMessage_Parameter =  Rules Violations Error_Count = 3

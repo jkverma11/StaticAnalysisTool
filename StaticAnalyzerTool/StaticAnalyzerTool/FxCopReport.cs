@@ -38,7 +38,7 @@ namespace StaticAnalyzerTool
 
             try
             {
-                System.IO.File.WriteAllText("FinalOutput.txt", strbuild.ToString());
+                System.IO.File.WriteAllText(@"..\..\..\..\FinalOutput.txt", strbuild.ToString());
             }
             catch (IOException e)
             {

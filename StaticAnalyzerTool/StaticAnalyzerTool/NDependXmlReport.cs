@@ -70,7 +70,7 @@ namespace StaticAnalyzerTool
             try
             {
                 using (System.IO.StreamWriter file =
-                    new System.IO.StreamWriter("FinalOutput.txt", true))
+                    new System.IO.StreamWriter(@"..\..\..\..\FinalOutput.txt", true))
                 {
                     file.Write(strbuild.ToString());
                 }

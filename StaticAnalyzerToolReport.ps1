@@ -19,12 +19,15 @@ $errorMessage      = ''
 $errorType         = ''
 $certainity        = ''
 $error_count       = ''
-$destination       = "C:\Users\320050491\StaticAnalysisTool"
+
+$destination = Get-Location
+#$destination = $destination.ToString()
+#$destination       = "C:\Users\320050491\StaticAnalysisTool"
 
 
 
-New-Item $destination\IntegratedAnalysisReport.html -Force -ItemType File
-$file = "C:\Users\320050491\StaticAnalysisTool\sample.txt"
+New-Item $destination\$ReportName -Force -ItemType File
+$file = "$destination\FinalOutput.txt"
 $content = Get-Content -Path $file
 
 
@@ -118,6 +121,8 @@ Add-Content -Path $destination\IntegratedAnalysisReport.html @"
 </body>
 </html> 
 "@
+
+exit $LASTEXITCODE
 
 
 #***********************************************************************************************************************

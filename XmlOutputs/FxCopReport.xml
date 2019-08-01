@@ -2,11 +2,11 @@
 <?xml-stylesheet type="text/xsl" href="c:\program files (x86)\microsoft fxcop 10.0\Xml\FxCopReport.xsl"?>
 <FxCopReport Version="10.0">
  <Targets>
-  <Target Name="$(ProjectDir)/CaseStudy1-brancth_patch1/CaseStudy1-brancth_patch1/AlertSystemClient/AlertSystemClient/bin/Debug/AlertSystemClient.exe">
+  <Target Name="$(ProjectDir)/../CaseStudy1-brancth_patch1/CaseStudy1-brancth_patch1/AlertSystemClient/AlertSystemClient/bin/Debug/AlertSystemClient.exe">
    <Modules>
     <Module Name="alertsystemclient.exe">
      <Messages>
-      <Message TypeName="AssembliesShouldHaveValidStrongNames" Category="Microsoft.Design" CheckId="CA2210" Status="Active" Created="2019-08-01 06:08:49Z" FixCategory="NonBreaking">
+      <Message TypeName="AssembliesShouldHaveValidStrongNames" Category="Microsoft.Design" CheckId="CA2210" Status="Active" Created="2019-08-01 10:48:22Z" FixCategory="NonBreaking">
        <Issue Name="NoStrongName" Certainty="95" Level="CriticalError">Sign 'AlertSystemClient.exe' with a strong name key.</Issue>
       </Message>
      </Messages>
@@ -17,15 +17,15 @@
          <Members>
           <Member Name="#GetTimestamp(System.DateTime)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="False">
            <Messages>
-            <Message Id="System.DateTime.ToString(System.String)" TypeName="SpecifyIFormatProvider" Category="Microsoft.Globalization" CheckId="CA1305" Status="Active" Created="2019-08-01 06:08:49Z" FixCategory="NonBreaking">
-             <Issue Name="IFormatProviderAlternateString" Certainty="95" Level="Error" Path="C:\Users\320066905\source\repos\AlertSystemClient\AlertSystemClient" File="Client.cs" Line="46">Because the behavior of 'DateTime.ToString(string)' could vary based on the current user's locale settings, replace this call in 'Client.GetTimestamp(DateTime)' with a call to 'DateTime.ToString(string, IFormatProvider)'. If the result of 'DateTime.ToString(string, IFormatProvider)' will be displayed to the user, specify 'CultureInfo.CurrentCulture' as the 'IFormatProvider' parameter. Otherwise, if the result will be stored and accessed by software, such as when it is persisted to disk or to a database, specify 'CultureInfo.InvariantCulture'.</Issue>
+            <Message Id="System.DateTime.ToString(System.String)" TypeName="SpecifyIFormatProvider" Category="Microsoft.Globalization" CheckId="CA1305" Status="Active" Created="2019-08-01 10:48:22Z" FixCategory="NonBreaking">
+             <Issue Name="IFormatProviderAlternateString" Certainty="95" Level="Error" Path="C:\Users\320050491\CaseStudy1-brancth_patch1\CaseStudy1-brancth_patch1\AlertSystemClient\AlertSystemClient" File="Client.cs" Line="46">Because the behavior of 'DateTime.ToString(string)' could vary based on the current user's locale settings, replace this call in 'Client.GetTimestamp(DateTime)' with a call to 'DateTime.ToString(string, IFormatProvider)'. If the result of 'DateTime.ToString(string, IFormatProvider)' will be displayed to the user, specify 'CultureInfo.CurrentCulture' as the 'IFormatProvider' parameter. Otherwise, if the result will be stored and accessed by software, such as when it is persisted to disk or to a database, specify 'CultureInfo.InvariantCulture'.</Issue>
             </Message>
            </Messages>
           </Member>
           <Member Name="#Main(System.String[])" Kind="Method" Static="True" Accessibility="Private" ExternallyVisible="False">
            <Messages>
-            <Message Id="args" TypeName="ReviewUnusedParameters" Category="Microsoft.Usage" CheckId="CA1801" Status="Active" Created="2019-08-01 06:08:49Z" FixCategory="NonBreaking">
-             <Issue Certainty="95" Level="Warning" Path="C:\Users\320066905\source\repos\AlertSystemClient\AlertSystemClient" File="Client.cs" Line="15">Parameter 'args' of 'Client.Main(string[])' is never used. Remove the parameter or use it in the method body.</Issue>
+            <Message Id="args" TypeName="ReviewUnusedParameters" Category="Microsoft.Usage" CheckId="CA1801" Status="Active" Created="2019-08-01 10:48:22Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Warning" Path="C:\Users\320050491\CaseStudy1-brancth_patch1\CaseStudy1-brancth_patch1\AlertSystemClient\AlertSystemClient" File="Client.cs" Line="15">Parameter 'args' of 'Client.Main(string[])' is never used. Remove the parameter or use it in the method body.</Issue>
             </Message>
            </Messages>
           </Member>
