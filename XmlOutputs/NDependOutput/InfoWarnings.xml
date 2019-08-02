@@ -25,6 +25,6 @@
   <Error>2 quality gates fail:
   - 'Critical Rules Violated' value 1 rules greater than fail threshold 0 rules
   - 'Debt Rating per Namespace' value 1 namespaces greater than fail threshold 0 namespaces</Error>
-  <Info>NDepend analysis done. Duration: 00:16</Info>
+  <Info>NDepend analysis done. Duration: 00:15</Info>
   <Info>Building the report (standard).</Info>
 </InfoWarnings>
