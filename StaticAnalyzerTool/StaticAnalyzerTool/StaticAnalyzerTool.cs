@@ -12,3 +12,4 @@ namespace StaticAnalyzerTool
         void ProcessOutput();
     }
 }
+ 
