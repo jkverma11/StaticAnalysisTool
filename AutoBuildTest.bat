@@ -1,4 +1,4 @@
-
+ECHO off
 cd StaticAnalyzerTool\StaticAnalyzerTool\bin\Debug
 StaticAnalyzerTool.exe
 IF %ERRORLEVEL% == 0 (
@@ -7,7 +7,7 @@ IF %ERRORLEVEL% == 0 (
     ECHO Failure while Launching the Analyzers
 )
 cd ../../../../
-powershell.exe -ExecutionPolicy Bypass -File C:\Users\320050491\StaticAnalysisTool\StaticAnalyzerToolReport.ps1
+powershell.exe -ExecutionPolicy Bypass -File StaticAnalyzerToolReport.ps1
 IF %ERRORLEVEL% == 0 (
     ECHO Successfull write to html file
 ) ELSE (
