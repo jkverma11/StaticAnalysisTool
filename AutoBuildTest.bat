@@ -1,4 +1,4 @@
-
+ECHO off
 cd StaticAnalyzerTool\StaticAnalyzerTool\bin\Debug
 StaticAnalyzerTool.exe
 IF %ERRORLEVEL% == 0 (
