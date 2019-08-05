@@ -2,30 +2,41 @@
 <?xml-stylesheet type="text/xsl" href="c:\program files (x86)\microsoft fxcop 10.0\Xml\FxCopReport.xsl"?>
 <FxCopReport Version="10.0">
  <Targets>
-  <Target Name="$(ProjectDir)/../CaseStudy1-brancth_patch1/CaseStudy1-brancth_patch1/AlertSystemClient/AlertSystemClient/bin/Debug/AlertSystemClient.exe">
+  <Target Name="$(ProjectDir)/../ChangesSaved/CaseStudy1-brancth_patch1/CaseStudy1-brancth_patch1/AlertSystemServer/AlertSystemServer/bin/Debug/AlertSystemServer.exe">
    <Modules>
-    <Module Name="alertsystemclient.exe">
+    <Module Name="alertsystemserver.exe">
      <Messages>
-      <Message TypeName="AssembliesShouldHaveValidStrongNames" Category="Microsoft.Design" CheckId="CA2210" Status="Active" Created="2019-08-02 04:47:55Z" FixCategory="NonBreaking">
-       <Issue Name="NoStrongName" Certainty="95" Level="CriticalError">Sign 'AlertSystemClient.exe' with a strong name key.</Issue>
+      <Message TypeName="AssembliesShouldHaveValidStrongNames" Category="Microsoft.Design" CheckId="CA2210" Status="Active" Created="2019-08-05 10:08:15Z" FixCategory="NonBreaking">
+       <Issue Name="NoStrongName" Certainty="95" Level="CriticalError">Sign 'AlertSystemServer.exe' with a strong name key.</Issue>
       </Message>
      </Messages>
      <Namespaces>
-      <Namespace Name="AlertSystemClient">
+      <Namespace Name="AlertSystemServer">
        <Types>
-        <Type Name="Client" Kind="Class" Accessibility="Assembly" ExternallyVisible="False">
+        <Type Name="alertFunctionality1" Kind="Class" Accessibility="Assembly" ExternallyVisible="False">
          <Members>
-          <Member Name="#GetTimestamp(System.DateTime)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="False">
+          <Member Name="#checkPulseStatus(System.String,System.String&amp;)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="False">
            <Messages>
-            <Message Id="System.DateTime.ToString(System.String)" TypeName="SpecifyIFormatProvider" Category="Microsoft.Globalization" CheckId="CA1305" Status="Active" Created="2019-08-02 04:47:55Z" FixCategory="NonBreaking">
-             <Issue Name="IFormatProviderAlternateString" Certainty="95" Level="Error" Path="C:\Users\320050491\CaseStudy1-brancth_patch1\CaseStudy1-brancth_patch1\AlertSystemClient\AlertSystemClient" File="Client.cs" Line="46">Because the behavior of 'DateTime.ToString(string)' could vary based on the current user's locale settings, replace this call in 'Client.GetTimestamp(DateTime)' with a call to 'DateTime.ToString(string, IFormatProvider)'. If the result of 'DateTime.ToString(string, IFormatProvider)' will be displayed to the user, specify 'CultureInfo.CurrentCulture' as the 'IFormatProvider' parameter. Otherwise, if the result will be stored and accessed by software, such as when it is persisted to disk or to a database, specify 'CultureInfo.InvariantCulture'.</Issue>
+            <Message Id="System.Int32.Parse(System.String)" TypeName="SpecifyIFormatProvider" Category="Microsoft.Globalization" CheckId="CA1305" Status="Active" Created="2019-08-05 10:08:15Z" FixCategory="NonBreaking">
+             <Issue Name="IFormatProviderAlternate" Certainty="95" Level="Error" Path="C:\Users\320066905\source\repos\AlertSystemServer\AlertSystemServer" File="Server.cs" Line="102">Because the behavior of 'int.Parse(string)' could vary based on the current user's locale settings, replace this call in 'alertFunctionality1.checkPulseStatus(string, ref string)' with a call to 'int.Parse(string, IFormatProvider)'. If the result of 'int.Parse(string, IFormatProvider)' will be based on input from the user, specify 'CultureInfo.CurrentCulture' as the 'IFormatProvider' parameter. Otherwise, if the result will based on input stored and accessed by software, such as when it is loaded from disk or from a database, specify 'CultureInfo.InvariantCulture'.</Issue>
             </Message>
            </Messages>
           </Member>
+          <Member Name="#checkSPO2Status(System.String,System.String&amp;)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="False">
+           <Messages>
+            <Message Id="System.Int32.Parse(System.String)" TypeName="SpecifyIFormatProvider" Category="Microsoft.Globalization" CheckId="CA1305" Status="Active" Created="2019-08-05 10:08:15Z" FixCategory="NonBreaking">
+             <Issue Name="IFormatProviderAlternate" Certainty="95" Level="Error" Path="C:\Users\320066905\source\repos\AlertSystemServer\AlertSystemServer" File="Server.cs" Line="76">Because the behavior of 'int.Parse(string)' could vary based on the current user's locale settings, replace this call in 'alertFunctionality1.checkSPO2Status(string, ref string)' with a call to 'int.Parse(string, IFormatProvider)'. If the result of 'int.Parse(string, IFormatProvider)' will be based on input from the user, specify 'CultureInfo.CurrentCulture' as the 'IFormatProvider' parameter. Otherwise, if the result will based on input stored and accessed by software, such as when it is loaded from disk or from a database, specify 'CultureInfo.InvariantCulture'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="Server" Kind="Class" Accessibility="Assembly" ExternallyVisible="False">
+         <Members>
           <Member Name="#Main(System.String[])" Kind="Method" Static="True" Accessibility="Private" ExternallyVisible="False">
            <Messages>
-            <Message Id="args" TypeName="ReviewUnusedParameters" Category="Microsoft.Usage" CheckId="CA1801" Status="Active" Created="2019-08-02 04:47:55Z" FixCategory="NonBreaking">
-             <Issue Certainty="95" Level="Warning" Path="C:\Users\320050491\CaseStudy1-brancth_patch1\CaseStudy1-brancth_patch1\AlertSystemClient\AlertSystemClient" File="Client.cs" Line="15">Parameter 'args' of 'Client.Main(string[])' is never used. Remove the parameter or use it in the method body.</Issue>
+            <Message Id="args" TypeName="ReviewUnusedParameters" Category="Microsoft.Usage" CheckId="CA1801" Status="Active" Created="2019-08-05 10:08:15Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Warning" Path="C:\Users\320066905\source\repos\AlertSystemServer\AlertSystemServer" File="Server.cs" Line="45">Parameter 'args' of 'Server.Main(string[])' is never used. Remove the parameter or use it in the method body.</Issue>
             </Message>
            </Messages>
           </Member>
@@ -62,7 +73,7 @@
   <Rule TypeName="SpecifyIFormatProvider" Category="Microsoft.Globalization" CheckId="CA1305">
    <Name>Specify IFormatProvider</Name>
    <Description>If an overload exists that takes an IFormatProvider argument, it should always be called in favor of an overload that does not. Some methods in the runtime convert a value to or from a string representation and take a string parameter that contains one or more characters, called format specifiers, which indicate how the value is to be converted. If the meaning of the format specifier varies by culture, a formatting object supplies the actual characters used in the string representation. In scenarios where sorting and comparison behavior should never change between cultures, specify CultureInfo.InvariantCulture, otherwise, specify CultureInfo.CurrentCulture.</Description>
-   <Resolution Name="IFormatProviderAlternateString">Because the behavior of {0} could vary based on the current user's locale settings, replace this call in {1} with a call to {2}. If the result of {2} will be displayed to the user, specify {3} as the 'IFormatProvider' parameter. Otherwise, if the result will be stored and accessed by software, such as when it is persisted to disk or to a database, specify {4}.</Resolution>
+   <Resolution Name="IFormatProviderAlternate">Because the behavior of {0} could vary based on the current user's locale settings, replace this call in {1} with a call to {2}. If the result of {2} will be based on input from the user, specify {3} as the 'IFormatProvider' parameter. Otherwise, if the result will based on input stored and accessed by software, such as when it is loaded from disk or from a database, specify {4}.</Resolution>
    <Owner />
    <Url>http://msdn.microsoft.com/library/ms182190(VS.100).aspx</Url>
    <Email>[none]</Email>

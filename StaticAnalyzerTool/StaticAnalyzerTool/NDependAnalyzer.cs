@@ -1,26 +1,19 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Configuration;
 using System.Diagnostics;
-using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading;
-using System.Threading.Tasks;
 
 namespace StaticAnalyzerTool
 {
     class NDependAnalyzer : IStaticAnalyzer
     {
-        readonly string _nDependXml = Directory.GetCurrentDirectory() + @"\..\..\..\..\common.ndproj";
+        readonly string _nDependXml = XmlParser.XmlParse("File", "NDependInputFile");
 
-        readonly string _ndependOut = Directory.GetCurrentDirectory() + @"\..\..\..\..\XmlOutputs\NDependOutput";
+        readonly string _ndependOut = XmlParser.XmlParse("File", "NDependOutputXml");
 
-        readonly string _nDependExe = Program.XmlParse("Tool", "NDepend");
+        readonly string _nDependExe = XmlParser.XmlParse("Tool", "NDepend");
 
-        public void ProcessInput( string projFilePath)
+        public void ProcessInput( Paths projFilePath)
         {
-            XmlWriter.EditSolutionName(_nDependXml, projFilePath, "IDEFile", "FilePath");
+            XmlWriter.EditSolutionName(_nDependXml, projFilePath.solutionPath, "IDEFile", "FilePath");
         }
 
         public void ProcessOutput()
@@ -38,6 +31,7 @@ namespace StaticAnalyzerTool
             catch (Exception e)
             {
                 Console.WriteLine(e.Message);
+                System.Environment.Exit(1);
             }
             string ndependOutputXml = _ndependOut + @"\TrendMetrics\NDependTrendData2019.xml";
             NDependXmlReport.GenerateNDependReport(ndependOutputXml);

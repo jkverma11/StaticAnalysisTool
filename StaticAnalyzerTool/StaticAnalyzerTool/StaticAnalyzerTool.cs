@@ -6,9 +6,14 @@ using System.Threading.Tasks;
 
 namespace StaticAnalyzerTool
 {
+    struct Paths
+    {
+        public string processPath;
+        public string solutionPath;
+    }
     interface IStaticAnalyzer
     {
-        void ProcessInput(string projFilePath);
+        void ProcessInput(Paths projFilePath);
         void ProcessOutput();
     }
 }

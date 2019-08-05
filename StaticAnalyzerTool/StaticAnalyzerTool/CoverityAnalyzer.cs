@@ -8,7 +8,7 @@ namespace StaticAnalyzerTool
 {
     class CoverityAnalyzer : IStaticAnalyzer
     {
-        public void ProcessInput(string projFilePath)
+        public void ProcessInput(Paths projFilePath)
         {
             throw new NotImplementedException();
         }

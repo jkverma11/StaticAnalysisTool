@@ -16,476 +16,769 @@ table, th, td {
     <th>Error Message</th> 
     <th>Error Type</th>
     <th>Error Certainity</th>
-    <th>Error Count</th> 
+    <th>Error Count</th>
+    <th>File Path</th>
+    <th>File Name</th>
+    <th>Line Number</th> 
    </tr>
 <tr>
 <td>FxCop</td>
-<td>Sign 'AlertSystemClient.exe' with a strong name key. </th>
-<td>CriticalError </th> 
-<td>95</th>
+<td>Sign 'AlertSystemServer.exe' with a strong name key. </th>
+<td>NoStrongName </th> 
+<td>95 </th>
 <td></th>
+<td></th> 
+<td></th>
+<td></th>
+
 </tr>
 <tr>
 <td>FxCop</td>
-<td>Because the behavior of 'DateTime.ToString(string)' could vary based on the current user's locale settings, replace this call in 'Client.GetTimestamp(DateTime)' with a call to 'DateTime.ToString(string, IFormatProvider)'. If the result of 'DateTime.ToString(string, IFormatProvider)' will be displayed to the user, specify 'CultureInfo.CurrentCulture' as the 'IFormatProvider' parameter. Otherwise, if the result will be stored and accessed by software, such as when it is persisted to disk or to a database, specify 'CultureInfo.InvariantCulture'. </th>
-<td>Error </th> 
-<td>95</th>
+<td>Because the behavior of 'int.Parse(string)' could vary based on the current user's locale settings, replace this call in 'alertFunctionality1.checkPulseStatus(string, ref string)' with a call to 'int.Parse(string, IFormatProvider)'. If the result of 'int.Parse(string, IFormatProvider)' will be based on input from the user, specify 'CultureInfo.CurrentCulture' as the 'IFormatProvider' parameter. Otherwise, if the result will based on input stored and accessed by software, such as when it is loaded from disk or from a database, specify 'CultureInfo.InvariantCulture'. </th>
+<td>IFormatProviderAlternate </th> 
+<td>95 </th>
 <td></th>
+<td>C:\Users\320066905\source\repos\AlertSystemServer\AlertSystemServer </th> 
+<td>Server.cs </th>
+<td>102</th>
+
 </tr>
 <tr>
 <td>FxCop</td>
-<td>Parameter 'args' of 'Client.Main(string[])' is never used. Remove the parameter or use it in the method body. </th>
-<td>Warning </th> 
-<td>95</th>
+<td>Because the behavior of 'int.Parse(string)' could vary based on the current user's locale settings, replace this call in 'alertFunctionality1.checkSPO2Status(string, ref string)' with a call to 'int.Parse(string, IFormatProvider)'. If the result of 'int.Parse(string, IFormatProvider)' will be based on input from the user, specify 'CultureInfo.CurrentCulture' as the 'IFormatProvider' parameter. Otherwise, if the result will based on input stored and accessed by software, such as when it is loaded from disk or from a database, specify 'CultureInfo.InvariantCulture'. </th>
+<td>IFormatProviderAlternate </th> 
+<td>95 </th>
 <td></th>
+<td>C:\Users\320066905\source\repos\AlertSystemServer\AlertSystemServer </th> 
+<td>Server.cs </th>
+<td>76</th>
+
+</tr>
+<tr>
+<td>FxCop</td>
+<td>Parameter 'args' of 'Server.Main(string[])' is never used. Remove the parameter or use it in the method body. </th>
+<td></th> 
+<td>95 </th>
+<td></th>
+<td>C:\Users\320066905\source\repos\AlertSystemServer\AlertSystemServer </th> 
+<td>Server.cs </th>
+<td>45</th>
+
 </tr>
 <tr>
 <td>NDepend</td>
 <td>New Issues since Baseline </th>
+<td>0</th> 
+<td></th>
+<td></th>
 <td></th> 
 <td></th>
-<td>0</th>
+<td></th>
+
 </tr>
 <tr>
 <td>NDepend</td>
 <td>Issues Fixed since Baseline </th>
+<td>0</th> 
+<td></th>
+<td></th>
 <td></th> 
 <td></th>
-<td>0</th>
+<td></th>
+
 </tr>
 <tr>
 <td>NDepend</td>
 <td>Issues Worsened since Baseline </th>
+<td>0</th> 
+<td></th>
+<td></th>
 <td></th> 
 <td></th>
-<td>0</th>
+<td></th>
+
 </tr>
 <tr>
 <td>NDepend</td>
 <td>Issues with severity Blocker </th>
+<td>0</th> 
+<td></th>
+<td></th>
 <td></th> 
 <td></th>
-<td>0</th>
+<td></th>
+
 </tr>
 <tr>
 <td>NDepend</td>
 <td>Issues with severity Critical </th>
+<td>0</th> 
+<td></th>
+<td></th>
 <td></th> 
 <td></th>
-<td>0</th>
+<td></th>
+
 </tr>
 <tr>
 <td>NDepend</td>
 <td>Issues with severity High </th>
+<td>3</th> 
+<td></th>
+<td></th>
 <td></th> 
 <td></th>
-<td>7</th>
+<td></th>
+
 </tr>
 <tr>
 <td>NDepend</td>
 <td>Issues with severity Medium </th>
+<td>14</th> 
+<td></th>
+<td></th>
 <td></th> 
 <td></th>
-<td>15</th>
+<td></th>
+
 </tr>
 <tr>
 <td>NDepend</td>
 <td>Issues with severity Low </th>
+<td>3</th> 
+<td></th>
+<td></th>
 <td></th> 
 <td></th>
-<td>12</th>
+<td></th>
+
 </tr>
 <tr>
 <td>NDepend</td>
 <td>Blocker/Critical/High Issues </th>
+<td>3</th> 
+<td></th>
+<td></th>
 <td></th> 
 <td></th>
-<td>7</th>
+<td></th>
+
 </tr>
 <tr>
 <td>NDepend</td>
 <td>Issues </th>
+<td>20</th> 
+<td></th>
+<td></th>
 <td></th> 
 <td></th>
-<td>34</th>
+<td></th>
+
 </tr>
 <tr>
 <td>NDepend</td>
 <td>Suppressed Issues </th>
+<td>0</th> 
+<td></th>
+<td></th>
 <td></th> 
 <td></th>
-<td>0</th>
+<td></th>
+
 </tr>
 <tr>
 <td>NDepend</td>
 <td>Rules </th>
+<td>152</th> 
+<td></th>
+<td></th>
 <td></th> 
 <td></th>
-<td>152</th>
+<td></th>
+
 </tr>
 <tr>
 <td>NDepend</td>
 <td>Rules Violated </th>
+<td>13</th> 
+<td></th>
+<td></th>
 <td></th> 
 <td></th>
-<td>15</th>
+<td></th>
+
 </tr>
 <tr>
 <td>NDepend</td>
 <td>Critical Rules Violated </th>
+<td>0</th> 
+<td></th>
+<td></th>
 <td></th> 
 <td></th>
-<td>1</th>
+<td></th>
+
 </tr>
 <tr>
 <td>NDepend</td>
 <td>Quality Gates </th>
+<td>11</th> 
+<td></th>
+<td></th>
 <td></th> 
 <td></th>
-<td>11</th>
+<td></th>
+
 </tr>
 <tr>
 <td>NDepend</td>
 <td>Quality Gates Warn </th>
+<td>0</th> 
+<td></th>
+<td></th>
 <td></th> 
 <td></th>
-<td>1</th>
+<td></th>
+
 </tr>
 <tr>
 <td>NDepend</td>
 <td>Quality Gates Fail </th>
+<td>0</th> 
+<td></th>
+<td></th>
 <td></th> 
 <td></th>
-<td>2</th>
+<td></th>
+
 </tr>
 <tr>
 <td>NDepend</td>
 <td>Percentage Debt (Metric) </th>
+<td>18.75</th> 
+<td></th>
+<td></th>
 <td></th> 
 <td></th>
-<td>29.78</th>
+<td></th>
+
 </tr>
 <tr>
 <td>NDepend</td>
 <td>Debt (Metric) </th>
+<td>0.22951</th> 
+<td></th>
+<td></th>
 <td></th> 
 <td></th>
-<td>0.33229</th>
+<td></th>
+
 </tr>
 <tr>
 <td>NDepend</td>
 <td>New Debt since Baseline (Metric) </th>
+<td>0</th> 
+<td></th>
+<td></th>
 <td></th> 
 <td></th>
-<td>0.5</th>
+<td></th>
+
 </tr>
 <tr>
 <td>NDepend</td>
 <td>Annual Interest (Metric) </th>
+<td>0.25208</th> 
+<td></th>
+<td></th>
 <td></th> 
 <td></th>
-<td>0.66458</th>
+<td></th>
+
 </tr>
 <tr>
 <td>NDepend</td>
 <td>New Annual Interest since Baseline (Metric) </th>
+<td>0</th> 
+<td></th>
+<td></th>
 <td></th> 
 <td></th>
-<td>0.55556</th>
+<td></th>
+
 </tr>
 <tr>
 <td>NDepend</td>
 <td>Breaking Point </th>
+<td>0.91047</th> 
+<td></th>
+<td></th>
 <td></th> 
 <td></th>
-<td>47</th>
+<td></th>
+
 </tr>
 <tr>
 <td>NDepend</td>
 <td>Breaking Point of Blocker / Critical / High Issues </th>
+<td>0.75269</th> 
+<td></th>
+<td></th>
 <td></th> 
 <td></th>
-<td>47</th>
+<td></th>
+
 </tr>
 <tr>
 <td>NDepend</td>
 <td>Lines of Code </th>
+<td>53</th> 
+<td></th>
+<td></th>
 <td></th> 
 <td></th>
-<td>0</th>
+<td></th>
+
 </tr>
 <tr>
 <td>NDepend</td>
 <td>Lines of Code (JustMyCode) </th>
+<td>53</th> 
+<td></th>
+<td></th>
 <td></th> 
 <td></th>
-<td>2</th>
+<td></th>
+
 </tr>
 <tr>
 <td>NDepend</td>
 <td>Lines of Code (NotMyCode) </th>
+<td>0</th> 
+<td></th>
+<td></th>
 <td></th> 
 <td></th>
-<td>265</th>
+<td></th>
+
 </tr>
 <tr>
 <td>NDepend</td>
 <td>Lines of Code Added since the Baseline </th>
+<td>0</th> 
+<td></th>
+<td></th>
 <td></th> 
 <td></th>
-<td>8</th>
+<td></th>
+
 </tr>
 <tr>
 <td>NDepend</td>
 <td>Source Files </th>
+<td>1</th> 
+<td></th>
+<td></th>
 <td></th> 
 <td></th>
-<td>31</th>
+<td></th>
+
 </tr>
 <tr>
 <td>NDepend</td>
 <td>IL Instructions </th>
+<td>374</th> 
+<td></th>
+<td></th>
 <td></th> 
 <td></th>
-<td>39.74</th>
+<td></th>
+
 </tr>
 <tr>
 <td>NDepend</td>
 <td>IL Instructions (NotMyCode) </th>
+<td>12</th> 
+<td></th>
+<td></th>
 <td></th> 
 <td></th>
-<td>1</th>
-</tr>
-<tr>
-<td>NDepend</td>
-<td>Lines of Comments </th>
-<td></th> 
 <td></th>
-<td>1</th>
-</tr>
-<tr>
-<td>NDepend</td>
-<td>Percentage of Comments </th>
-<td></th> 
-<td></th>
-<td>2</th>
+
 </tr>
 <tr>
 <td>NDepend</td>
 <td>Assemblies </th>
+<td>1</th> 
+<td></th>
+<td></th>
 <td></th> 
 <td></th>
-<td>0</th>
+<td></th>
+
 </tr>
 <tr>
 <td>NDepend</td>
 <td>Namespaces </th>
+<td>1</th> 
+<td></th>
+<td></th>
 <td></th> 
 <td></th>
-<td>2</th>
+<td></th>
+
 </tr>
 <tr>
 <td>NDepend</td>
 <td>Types </th>
+<td>3</th> 
+<td></th>
+<td></th>
 <td></th> 
 <td></th>
-<td>0</th>
+<td></th>
+
 </tr>
 <tr>
 <td>NDepend</td>
 <td>Public Types </th>
+<td>0</th> 
+<td></th>
+<td></th>
 <td></th> 
 <td></th>
-<td>0</th>
+<td></th>
+
 </tr>
 <tr>
 <td>NDepend</td>
 <td>Classes </th>
+<td>3</th> 
+<td></th>
+<td></th>
 <td></th> 
 <td></th>
-<td>0</th>
+<td></th>
+
 </tr>
 <tr>
 <td>NDepend</td>
 <td>Abstract Classes </th>
+<td>1</th> 
+<td></th>
+<td></th>
 <td></th> 
 <td></th>
-<td>8</th>
+<td></th>
+
 </tr>
 <tr>
 <td>NDepend</td>
 <td>Interfaces </th>
+<td>0</th> 
+<td></th>
+<td></th>
 <td></th> 
 <td></th>
-<td>0</th>
+<td></th>
+
 </tr>
 <tr>
 <td>NDepend</td>
 <td>Structures </th>
+<td>0</th> 
+<td></th>
+<td></th>
 <td></th> 
 <td></th>
-<td>8</th>
+<td></th>
+
 </tr>
 <tr>
 <td>NDepend</td>
 <td>Methods </th>
+<td>9</th> 
+<td></th>
+<td></th>
 <td></th> 
 <td></th>
-<td>3</th>
+<td></th>
+
 </tr>
 <tr>
 <td>NDepend</td>
 <td>Abstract Methods </th>
+<td>2</th> 
+<td></th>
+<td></th>
 <td></th> 
 <td></th>
-<td>18</th>
+<td></th>
+
 </tr>
 <tr>
 <td>NDepend</td>
 <td>Concrete Methods </th>
+<td>7</th> 
+<td></th>
+<td></th>
 <td></th> 
 <td></th>
-<td>7.83</th>
+<td></th>
+
 </tr>
 <tr>
 <td>NDepend</td>
 <td>Fields </th>
+<td>1</th> 
+<td></th>
+<td></th>
 <td></th> 
 <td></th>
-<td>9.2</th>
+<td></th>
+
 </tr>
 <tr>
 <td>NDepend</td>
 <td>Max # Lines of Code for Methods (JustMyCode) </th>
+<td>16</th> 
+<td></th>
+<td></th>
 <td></th> 
 <td></th>
-<td>28</th>
+<td></th>
+
 </tr>
 <tr>
 <td>NDepend</td>
 <td>Average # Lines of Code for Methods </th>
+<td>13.25</th> 
+<td></th>
+<td></th>
 <td></th> 
 <td></th>
-<td>23.5</th>
+<td></th>
+
+</tr>
+<tr>
+<td>NDepend</td>
+<td>Average # Lines of Code for Methods with at least 3 Lines of Code </th>
+<td>13.25</th> 
+<td></th>
+<td></th>
+<td></th> 
+<td></th>
+<td></th>
+
 </tr>
 <tr>
 <td>NDepend</td>
 <td>Max # Lines of Code for Types (JustMyCode) </th>
+<td>29</th> 
+<td></th>
+<td></th>
 <td></th> 
 <td></th>
-<td>5</th>
+<td></th>
+
 </tr>
 <tr>
 <td>NDepend</td>
 <td>Average # Lines of Code for Types </th>
+<td>26.5</th> 
+<td></th>
+<td></th>
 <td></th> 
 <td></th>
-<td>1.83</th>
+<td></th>
+
 </tr>
 <tr>
 <td>NDepend</td>
 <td>Max Cyclomatic Complexity for Methods </th>
+<td>0</th> 
+<td></th>
+<td></th>
 <td></th> 
 <td></th>
-<td>10</th>
+<td></th>
+
 </tr>
 <tr>
 <td>NDepend</td>
 <td>Average Cyclomatic Complexity for Methods </th>
+<td>0</th> 
+<td></th>
+<td></th>
 <td></th> 
 <td></th>
-<td>2.62</th>
+<td></th>
+
 </tr>
 <tr>
 <td>NDepend</td>
 <td>Max IL Cyclomatic Complexity for Methods </th>
+<td>12</th> 
+<td></th>
+<td></th>
 <td></th> 
 <td></th>
-<td>3</th>
+<td></th>
+
 </tr>
 <tr>
 <td>NDepend</td>
 <td>Average IL Cyclomatic Complexity for Methods </th>
+<td>5.43</th> 
+<td></th>
+<td></th>
 <td></th> 
 <td></th>
-<td>0.625</th>
+<td></th>
+
 </tr>
 <tr>
 <td>NDepend</td>
 <td>Max IL Nesting Depth for Methods </th>
+<td>2</th> 
+<td></th>
+<td></th>
 <td></th> 
 <td></th>
-<td>5</th>
+<td></th>
+
 </tr>
 <tr>
 <td>NDepend</td>
 <td>Average IL Nesting Depth for Methods </th>
+<td>0.71429</th> 
+<td></th>
+<td></th>
 <td></th> 
 <td></th>
-<td>4</th>
+<td></th>
+
 </tr>
 <tr>
 <td>NDepend</td>
 <td>Max # of Methods for Types </th>
+<td>3</th> 
+<td></th>
+<td></th>
 <td></th> 
 <td></th>
-<td>0</th>
+<td></th>
+
 </tr>
 <tr>
 <td>NDepend</td>
 <td>Average # Methods for Types </th>
+<td>3</th> 
+<td></th>
+<td></th>
 <td></th> 
 <td></th>
-<td>4</th>
+<td></th>
+
 </tr>
 <tr>
 <td>NDepend</td>
 <td>Lines of Code Uncoverable </th>
+<td>0</th> 
+<td></th>
+<td></th>
 <td></th> 
 <td></th>
-<td>14</th>
+<td></th>
+
 </tr>
 <tr>
 <td>NDepend</td>
 <td>Third-Party Assemblies Used </th>
+<td>4</th> 
+<td></th>
+<td></th>
 <td></th> 
 <td></th>
-<td>54</th>
+<td></th>
+
 </tr>
 <tr>
 <td>NDepend</td>
 <td>Third-Party Namespaces Used </th>
+<td>11</th> 
+<td></th>
+<td></th>
 <td></th> 
 <td></th>
-<td>34</th>
+<td></th>
+
 </tr>
 <tr>
 <td>NDepend</td>
 <td>Third-Party Types Used </th>
+<td>41</th> 
+<td></th>
+<td></th>
 <td></th> 
 <td></th>
-<td>0</th>
+<td></th>
+
 </tr>
 <tr>
 <td>NDepend</td>
 <td>Third-Party Methods Used </th>
+<td>18</th> 
+<td></th>
+<td></th>
 <td></th> 
 <td></th>
-<td>34</th>
+<td></th>
+
 </tr>
 <tr>
 <td>NDepend</td>
 <td>Third-Party Fields Used </th>
+<td>0</th> 
+<td></th>
+<td></th>
 <td></th> 
 <td></th>
-<td>21</th>
+<td></th>
+
 </tr>
 <tr>
 <td>NDepend</td>
 <td>Rules Violations </th>
+<td>20</th> 
+<td></th>
+<td></th>
 <td></th> 
 <td></th>
-<td>3</th>
+<td></th>
+
+</tr>
+<tr>
+<td>NDepend</td>
+<td>Critical Rules </th>
+<td>21</th> 
+<td></th>
+<td></th>
+<td></th> 
+<td></th>
+<td></th>
+
+</tr>
+<tr>
+<td>NDepend</td>
+<td>Critical Rules Violations </th>
+<td>0</th> 
+<td></th>
+<td></th>
+<td></th> 
+<td></th>
+<td></th>
+
 </tr>
  </table>
 </body>

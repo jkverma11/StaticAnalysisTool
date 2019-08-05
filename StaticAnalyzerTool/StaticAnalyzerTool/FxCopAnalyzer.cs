@@ -9,15 +9,15 @@ namespace StaticAnalyzerTool
 {
     class FxCopAnalyzer : IStaticAnalyzer
     {
-        readonly string _fxCopOutput= Directory.GetCurrentDirectory() + @"\..\..\..\..\XmlOutputs\FxCopReport.xml";
+        readonly string _fxCopOutput = XmlParser.XmlParse("File", "FxCopOutputXml");
 
-        readonly string _fxCopXml = Directory.GetCurrentDirectory() + @"\..\..\..\..\common_fx_cop_file.FxCop";
+        readonly string _fxCopXml = XmlParser.XmlParse("File", "FxCopInputFile");
 
-        readonly string _fxCopExe = Program.XmlParse("Tool", "FxCop");
+        readonly string _fxCopExe = XmlParser.XmlParse("Tool", "FxCop");
 
-        public void ProcessInput(string projFilePath)
+        public void ProcessInput(Paths projFilePath)
         {
-            XmlWriter.EditSolutionName(_fxCopXml,projFilePath,"Target","Name");
+            XmlWriter.EditSolutionName(_fxCopXml,projFilePath.processPath,"Target","Name");
         }
 
         public void ProcessOutput()
@@ -36,6 +36,7 @@ namespace StaticAnalyzerTool
             catch (Exception e)
             {
                 Console.WriteLine(e.Message);
+                System.Environment.Exit(1);
             }
             FxCopReport.GenerateFxCopReport(_fxCopOutput);
         }

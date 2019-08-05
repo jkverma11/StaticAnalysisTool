@@ -2,7 +2,6 @@
 <InfoWarnings>
   <Info>Begin full analysis with NDepend v2019.2.6</Info>
   <Info>Output directory overridden by command line argument: C:\Users\320050765\StaticAnalysisTool\XmlOutputs\NDependOutput</Info>
-  <Info>Compare with analysis result obtained on 2019 August - 02 Friday 11:27  (which is the analysis result with date closest to 30 days ago)</Info>
   <Info>.NET Assembly resolved from the Visual Studio solution file {C:\Users\320050765\ChangesSaved\CaseStudy1-brancth_patch1\CaseStudy1-brancth_patch1\AlertSystemServer\AlertSystemServer.sln}
    C:\Users\320050765\ChangesSaved\CaseStudy1-brancth_patch1\CaseStudy1-brancth_patch1\AlertSystemServer\AlertSystemServer\bin\Debug\AlertSystemServer.exe</Info>
   <Info>No .NET Assembly filtered out from the Visual Studio solution file {C:\Users\320050765\ChangesSaved\CaseStudy1-brancth_patch1\CaseStudy1-brancth_patch1\AlertSystemServer\AlertSystemServer.sln}.</Info>
@@ -19,6 +18,6 @@
   <Warning>The source directory {C:\Users\320066905\source\repos\AlertSystemServer\AlertSystemServer} referenced by the PDB file of the assembly {AlertSystemServer} can't be found.</Warning>
   <Info>Log trend metrics values.</Info>
   <Info>Execute queries and rules.</Info>
-  <Info>NDepend analysis done. Duration: 00:32</Info>
+  <Info>NDepend analysis done. Duration: 00:40</Info>
   <Info>Building the report (standard).</Info>
 </InfoWarnings>

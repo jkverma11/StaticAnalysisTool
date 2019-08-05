@@ -11,13 +11,22 @@ namespace StaticAnalyzerTool
     {
      public static void EditSolutionName(string XmlPath, string SolutionPath, string ElementName,string AttributeName )
         {
-            var xmlDoc = XElement.Load(XmlPath);
+            try
+            {
+                var xmlDoc = XElement.Load(XmlPath);
+                var staticTools = (from element in xmlDoc.DescendantsAndSelf()
+                    where element.Name == ElementName
+                    select element).FirstOrDefault();
+                staticTools.Attribute(AttributeName).SetValue(SolutionPath);
+                xmlDoc.Save(XmlPath);
 
-            var staticTools = (from element in xmlDoc.DescendantsAndSelf()
-                where element.Name == ElementName
-                select element).FirstOrDefault();
-            staticTools.Attribute(AttributeName).SetValue(SolutionPath);
-            xmlDoc.Save(XmlPath);
+            }
+            catch(Exception exception)
+            {
+                Console.WriteLine(exception.Message);
+                System.Environment.Exit(1);
+            }
+            
         }
     }
 }

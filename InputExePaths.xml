@@ -1,10 +1,16 @@
 <Entry>
 	<InputCodePaths>
-		<Process Name ="ExePath" Path ="C:\Users\320050491\CaseStudy1-brancth_patch1\CaseStudy1-brancth_patch1\AlertSystemClient\AlertSystemClient\bin\Debug\AlertSystemClient.exe"/>
-		<Process Name ="SolutionPath" Path ="C:\Users\320050491\CaseStudy1-brancth_patch1\CaseStudy1-brancth_patch1\AlertSystemClient\AlertSystemClient.sln"/>
+		<Process Name ="ExePath" Path ="C:\Users\320050765\ChangesSaved\CaseStudy1-brancth_patch1\CaseStudy1-brancth_patch1\AlertSystemServer\AlertSystemServer\bin\Debug\AlertSystemServer.exe"/>
+		<Process Name ="SolutionPath" Path ="C:\Users\320050765\ChangesSaved\CaseStudy1-brancth_patch1\CaseStudy1-brancth_patch1\AlertSystemServer\AlertSystemServer.sln"/>
 	</InputCodePaths>
 	<Tools>
 		<Tool Name ="FxCop" Path="C:\Program Files (x86)\Microsoft Fxcop 10.0\FxCopCmd.exe"/>
-		<Tool Name ="NDepend" Path="C:\Users\320050491\StaticAnalysisTool\NDepend_2019.2.6.9270\NDepend.Console.exe"/>
+		<Tool Name ="NDepend" Path="C:\Users\320050765\StaticAnalysisTool\NDepend_2019.2.6.9270\NDepend.Console.exe"/>
 	</Tools>
+	<Files>
+		<File Name = "NDependInputFile" Path ="C:\Users\320050765\StaticAnalysisTool\common.ndproj"/>
+		<File Name = "NDependOutputXml" Path ="C:\Users\320050765\StaticAnalysisTool\XmlOutputs\NDependOutput"/>
+		<File Name = "FxCopInputFile" Path ="C:\Users\320050765\StaticAnalysisTool\common_fx_cop_file.FxCop"/>
+		<File Name = "FxCopOutputXml" Path ="C:\Users\320050765\StaticAnalysisTool\XmlOutputs\FxCopReport.xml"/>
+	</Files>
 </Entry>

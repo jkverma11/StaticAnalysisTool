@@ -1,11 +1,11 @@
 @Echo OFF
 Echo "Building solution/project file using batch file"
 SET PATH=C:\Windows\Microsoft.NET\Framework\v4.0.30319\
-SET SolutionPath=C:\Users\320050491\StaticAnalysisTool\StaticAnalyzerTool\StaticAnalyzerTool.sln
+SET SolutionPath=C:\Users\320050765\StaticAnalysisTool\StaticAnalyzerTool\StaticAnalyzerTool.sln
 
 MSbuild %SolutionPath% /p:Configuration=Debug /p:Platform="Any CPU"
 
-cd C:\Users\320050491\StaticAnalysisTool\StaticAnalyzerTool\StaticAnalyzerTool\bin\Debug
+cd C:\Users\320050765\StaticAnalysisTool\StaticAnalyzerTool\StaticAnalyzerTool\bin\Debug
 StaticAnalyzerTool.exe 
 IF %ERRORLEVEL% == 0 (
     ECHO Successfully Launched the Analyzers
