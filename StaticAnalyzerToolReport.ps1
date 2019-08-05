@@ -19,6 +19,9 @@ $errorMessage      = ''
 $errorType         = ''
 $certainity        = ''
 $error_count       = ''
+$file_path         = ''
+$file_name         = ''
+$line_number       = ''
 
 $destination = Get-Location
 #$destination = $destination.ToString()
@@ -50,7 +53,10 @@ function Write_to_html_file
       [parameter(mandatory=$true)][string]$errorMessage,
       [string]$errorType,
       [string]$certainity,
-      [string]$error_count
+      [string]$error_count,
+      [string]$file_path,
+      [string]$file_name,
+      [string]$line_number
     )
 
     Add-Content -Path $destination\IntegratedAnalysisReport.html @"
@@ -60,6 +66,10 @@ function Write_to_html_file
 <td>$errorType</th> 
 <td>$certainity</th>
 <td>$error_count</th>
+<td>$file_path</th> 
+<td>$file_name</th>
+<td>$line_number</th>
+
 </tr>
 "@    
 }
@@ -85,21 +95,27 @@ table, th, td {
     <th>Error Message</th> 
     <th>Error Type</th>
     <th>Error Certainity</th>
-    <th>Error Count</th> 
+    <th>Error Count</th>
+    <th>File Path</th>
+    <th>File Name</th>
+    <th>Line Number</th> 
    </tr>
 "@
 
 foreach ($line in $content)
 {
 
-    if($line -match "Error_Message\s*=\s*(.*)\s*Error_Type\s*=\s*(.*)\s*Certainity_Level\s*=\s*(.*)\s*")
+    if($line -match "Error_Message\s*=\s*(.*)\s*Error_Type\s*=\s*(.*)\s*Certainity_Level\s*=\s*(.*)\s*Path\s*=\s*(.*)\s*File_Name\s*=\s*(.*)\s*Line\s*=\s*(.*)\s*")
     {
         $ststicAnalyzer = "FxCop"
         $errorMessage = $Matches[1]
         $errorType = $Matches[2]
         $certainity = $Matches[3]
+        $file_path = $Matches[4]
+        $file_name = $Matches[5]
+        $line_number = $Matches[6]
         $error_count = ''
-        Write_to_html_file $ststicAnalyzer $errorMessage $errorType $certainity $error_count
+        Write_to_html_file $ststicAnalyzer $errorMessage $errorType $certainity $error_count $file_path $file_name $line_number
         
     }
 
@@ -108,9 +124,9 @@ foreach ($line in $content)
         $ststicAnalyzer = "NDepend"
         $errorMessage = $Matches[1]
         $error_count = $Matches[2]
-        $errorType = ''
-        $certainity = ''
-        Write_to_html_file $ststicAnalyzer $errorMessage $errorType $certainity $error_count
+        #$errorType = ''
+        #$certainity = ''
+        Write_to_html_file $ststicAnalyzer $errorMessage $error_count
         
    } 
     
